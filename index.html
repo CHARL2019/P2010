@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Carnet de vol</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='116' fill='%2312263a'/%3E%3Cpolygon points='140,432 372,432 282,150 230,150' fill='%231f5fa8'/%3E%3Cpolygon points='140,432 150,432 236,150 230,150' fill='%23e7edf2'/%3E%3Cpolygon points='362,432 372,432 282,150 276,150' fill='%23e7edf2'/%3E%3Crect x='249' y='372' width='14' height='46' rx='3' fill='%23e7edf2'/%3E%3Crect x='251' y='312' width='10' height='36' rx='2.5' fill='%23e7edf2'/%3E%3Crect x='252' y='262' width='8' height='28' rx='2' fill='%23e7edf2'/%3E%3Crect x='253' y='222' width='6' height='22' rx='2' fill='%23e7edf2'/%3E%3Crect x='254' y='190' width='4' height='16' rx='1.5' fill='%23e7edf2'/%3E%3Ccircle cx='256' cy='104' r='46' fill='none' stroke='%23ffb547' stroke-opacity='.35' stroke-width='6'/%3E%3Ccircle cx='256' cy='104' r='24' fill='%23ffb547'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#12263a">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
 <script>try{document.documentElement.dataset.theme=localStorage.getItem("carnet-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){document.documentElement.dataset.theme="light"}</script>
 <style>
@@ -26,6 +28,8 @@ button.ghost:hover{color:var(--acc)}button.ghost.del:hover{color:var(--stamp)}
 /* barre du haut */
 .top{display:flex;align-items:center;gap:10px;padding:16px 0}
 .top h1{font-size:1.25rem;font-variation-settings:"wdth" 110}
+.brand{display:flex;align-items:center;gap:11px}
+.brand svg{width:38px;height:38px;flex:none;border-radius:9px}
 .menu{position:relative}
 .menu summary{list-style:none;cursor:pointer;border:1px solid var(--rule);background:var(--paper);border-radius:6px;padding:8px 14px;font-weight:600}
 .menu summary::-webkit-details-marker{display:none}
@@ -116,7 +120,7 @@ dialog form{padding:22px}
 <body class="boot">
 <div class="wrap">
   <header class="top">
-    <h1>Carnet de vol</h1><span class="sp"></span>
+    <h1 class="brand"><svg viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="116" fill="#12263a"/><polygon points="140,432 372,432 282,150 230,150" fill="#1f5fa8"/><polygon points="140,432 150,432 236,150 230,150" fill="#e7edf2"/><polygon points="362,432 372,432 282,150 276,150" fill="#e7edf2"/><rect x="249" y="372" width="14" height="46" rx="3" fill="#e7edf2"/><rect x="251" y="312" width="10" height="36" rx="2.5" fill="#e7edf2"/><rect x="252" y="262" width="8" height="28" rx="2" fill="#e7edf2"/><rect x="253" y="222" width="6" height="22" rx="2" fill="#e7edf2"/><rect x="254" y="190" width="4" height="16" rx="1.5" fill="#e7edf2"/><circle cx="256" cy="104" r="46" fill="none" stroke="#ffb547" stroke-opacity=".35" stroke-width="6"/><circle cx="256" cy="104" r="24" fill="#ffb547"/></svg><span>Carnet de vol</span></h1><span class="sp"></span>
     <button id="thm" aria-label="Changer de thème">Thème</button>
     <details class="menu"><summary>Données</summary><div class="pop">
       <button id="csv">Exporter en CSV</button><button id="bak">Sauvegarde JSON</button><button id="imp">Importer une sauvegarde</button><button id="prt">Imprimer le carnet</button>
